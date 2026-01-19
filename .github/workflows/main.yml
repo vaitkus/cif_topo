@@ -1,4 +1,4 @@
-# Check that syntax is correct
+# Check the syntax, semantics and layout of DDLm dictionaries
 
 name: CIF Syntax and Style Check
 
