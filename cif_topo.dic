@@ -11,7 +11,7 @@ data_CIF_TOPO
     _dictionary.title             CIF_TOPO
     _dictionary.class             Instance
     _dictionary.version           0.9.7
-    _dictionary.date              2026-03-19
+    _dictionary.date              2026-04-13
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/main/cif_topo.dic
     _dictionary.ddl_conformance   4.2.0
@@ -1990,7 +1990,7 @@ save_
        to be compatible with the data items that they are linked to.
        (A. Vaitkus)
 ;
-         0.9.7                    2026-03-19
+         0.9.7                    2026-04-13
 ;
        # Please update the date above and describe the change below until
        # ready for the next release.
@@ -2023,4 +2023,8 @@ save_
        More small editorial/style changes. (B. McMahon)
 
        Added DICTIONARY_AUTHOR loop. (B. McMahon)
+
+       Added _enumeration.range to _topol_net.td10, _topol_net.genus,
+       _topol_tiling.faces, _topol_tiling.edges, _topol_tiling.tiles,
+       _topol_tiling.vertices. (B. McMahon)
 ;
