@@ -929,6 +929,7 @@ save_topol_net.genus
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            0:
     _units.code                   none
 
 save_
@@ -1152,6 +1153,7 @@ save_topol_net.td10
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            0:
     _units.code                   none
 
 save_
@@ -1689,6 +1691,7 @@ save_topol_tiling.edges
     _type.source                  Recorded
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -1707,6 +1710,7 @@ save_topol_tiling.faces
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -1791,6 +1795,7 @@ save_topol_tiling.tiles
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -1809,6 +1814,7 @@ save_topol_tiling.vertices
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
