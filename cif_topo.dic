@@ -11,10 +11,11 @@ data_CIF_TOPO
     _dictionary.title             CIF_TOPO
     _dictionary.class             Instance
     _dictionary.version           0.9.7
-    _dictionary.date              2026-01-19
+    _dictionary.date              2026-04-13
     _dictionary.uri
         https://raw.githubusercontent.com/COMCIFS/TopoCif/main/cif_topo.dic
-    _dictionary.ddl_conformance   4.1.0
+    _dictionary.ddl_conformance   4.2.0
+    _dictionary.licensing_SPDX    CC-BY-4.0
     _dictionary.namespace         CifCore
     _description.text
 ;
@@ -360,11 +361,11 @@ save_TOPOL_LINK
 ;
     The TOPOL_LINK category describes the crystal structure
     connectivity and encodes the weighted coloured
-    symmetry-labeled quotient graph, from which the whole
+    symmetry-labelled quotient graph, from which the whole
     periodic net describing the overall topology of the crystal
     structure can be restored. The definition of
-    symmetry-labeled quotient graph was given by Klein (1996)
-    and examples of weights and colors for the graph edges and
+    symmetry-labelled quotient graph was given by Klein (1996)
+    and examples of weights and colours for the graph edges and
     vertices are provided by Blatov (2006). The
     connections described in TOPOL_LINK may correspond to any
     vectors in the structure, not just bonds or contacts. The two end-point
@@ -485,7 +486,7 @@ save_topol_link.node_id_1
     _definition.update            2021-10-11
     _description.text
 ;
-    The identifier of the first node associated with a link
+    The identifier of the first node associated with a link.
     This must match a _topol_node.id value.
 ;
     _name.category_id             topol_link
@@ -506,7 +507,7 @@ save_topol_link.node_id_2
     _definition.update            2021-10-11
     _description.text
 ;
-    The identifier of the second node associated with a link
+    The identifier of the second node associated with a link.
     This must match a _topol_node.id value.
 ;
     _name.category_id             topol_link
@@ -815,7 +816,7 @@ save_topol_link.type
 ;
     The chemical bond type associated with the connection between the
     two sites. If no bond exists, use an undelimited period character.
-    If the bond type is unknown, use ? or leave out the data item. The
+    If the bond type is unknown, use '?' or leave out the data item. The
     number of electron pairs participating in the bond can be indicated
     using _topol_link.order. The value 'sb' or 'gl' should be used for
     any case where the connection is not a bond between two atoms.
@@ -928,6 +929,7 @@ save_topol_net.genus
     _type.source                  Derived
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            0:
     _units.code                   none
 
 save_
@@ -976,7 +978,7 @@ save_topol_net.overall_topology_epinet
     _description.text
 ;
     The identifier for the overall topology as listed
-    in the EPINET database at http://epinet.anu.edu.au.
+    in the EPINET database at https://epinet.anu.edu.au.
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_EPINET
@@ -999,7 +1001,7 @@ save_topol_net.overall_topology_iza
     Zeolite Association (IZA-SC).
 
     Reference: Database for Zeolite Structures
-    http://www.iza-structure.org/databases/
+    https://www.iza-structure.org/databases/
 ;
     _name.category_id             topol_net
     _name.object_id               overall_topology_IZA
@@ -1021,8 +1023,8 @@ save_topol_net.overall_topology_rcsr
     by O'Keeffe et al. (2008).
 
     Reference: O'Keeffe, M., Peskov, M. A., Ramsden, S. J. & Yaghi, O. M.
-    (2008). The Reticular Chemistry Structure Resource (RCSR) Database of,
-    and Symbols for, Crystal Nets. Acc. Chem. Res. 41, 1782-1789,
+    (2008). The Reticular Chemistry Structure Resource (RCSR) database of,
+    and symbols for, crystal nets. Acc. Chem. Res. 41, 1782-1789,
     DOI:10.1021/ar800124u.
 ;
     _name.category_id             topol_net
@@ -1151,6 +1153,7 @@ save_topol_net.td10
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            0:
     _units.code                   none
 
 save_
@@ -1175,7 +1178,7 @@ save_topol_net.total_point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         '{6^6}'                       'Point symbol for diamond'
+         '{6^6}'                       'point symbol for diamond'
          '{4.6^2}2{4^2.6^10.8^3}'      '3,6-coordinated underlying net of TiO2'
 
 save_
@@ -1253,7 +1256,7 @@ save_topol_node.coordination_sequence
     _type.contents                Integer
     _units.code                   none
     _description_example.case     [4  12  24  42  64  92  124  162  204  252]
-    _description_example.detail   'The diamond coordination sequence'
+    _description_example.detail   'The diamond coordination sequence.'
 
 save_
 
@@ -1273,7 +1276,7 @@ save_topol_node.coordination_sequence_plain
     _type.container               Single
     _type.contents                Text
     _description_example.case     '4 12 24 42 64 92 124 162 204 252'
-    _description_example.detail   'The diamond coordination sequence'
+    _description_example.detail   'The diamond coordination sequence.'
 
 save_
 
@@ -1510,10 +1513,10 @@ save_topol_node.point_symbol
     loop_
       _description_example.case
       _description_example.detail
-         6^6                 'Point symbol for a diamond vertex'
-         4^2.6^3.8           'Point symbol for a feldspar 4-coordinated vertex'
-         7^5.9               'Point symbol for the vertex of 4-c qzd net'
-         4^4.6^6             'Point symbol for the vertex of 5-c sqp net'
+         6^6                 'point symbol for a diamond vertex'
+         4^2.6^3.8           'point symbol for a feldspar 4-coordinated vertex'
+         7^5.9               'point symbol for the vertex of 4-c qzd net'
+         4^4.6^6             'point symbol for the vertex of 5-c sqp net'
 
 save_
 
@@ -1688,6 +1691,7 @@ save_topol_tiling.edges
     _type.source                  Recorded
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -1706,6 +1710,7 @@ save_topol_tiling.faces
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -1771,8 +1776,8 @@ save_topol_tiling.signature
     loop_
       _description_example.case
       _description_example.detail
-         '[6^4]'                               'Natural tiling for diamond'
-         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'     'Natural tiling for zeolite LTA'
+         '[6^4]'                               'natural tiling for diamond'
+         '3[4^6]+[4^6.6^8]+[4^12.6^8.8^6]'     'natural tiling for zeolite LTA'
 
 save_
 
@@ -1790,6 +1795,7 @@ save_topol_tiling.tiles
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
@@ -1808,9 +1814,22 @@ save_topol_tiling.vertices
     _type.source                  Assigned
     _type.container               Single
     _type.contents                Integer
+    _enumeration.range            1:
     _units.code                   none
 
 save_
+
+    loop_
+      _dictionary_author.id
+      _dictionary_author.name
+      _dictionary_author.id_orcid
+      _dictionary_author.email
+         1              'Blatov, Vladislav A.'              0000-0002-4048-7218
+         blatov@topospro.com
+         2              'Proserpio, Davide M.'              0000-0001-6597-9406
+         davide.proserpio@unimi.it
+         3              'Hanson, Robert M.'                 0000-0001-5411-2356
+         hansonr@stolaf.edu
 
     loop_
       _dictionary_audit.version
@@ -1971,7 +1990,7 @@ save_
        to be compatible with the data items that they are linked to.
        (A. Vaitkus)
 ;
-         0.9.7                    2026-01-19
+         0.9.7                    2026-04-13
 ;
        # Please update the date above and describe the change below until
        # ready for the next release.
@@ -2000,4 +2019,12 @@ save_
 
        Renamed dictionary file from "Topology.dic" to "cif_topo.dic".
        (A. Vaitkus)
+
+       More small editorial/style changes. (B. McMahon)
+
+       Added DICTIONARY_AUTHOR loop. (B. McMahon)
+
+       Added _enumeration.range to _topol_net.td10, _topol_net.genus,
+       _topol_tiling.faces, _topol_tiling.edges, _topol_tiling.tiles,
+       _topol_tiling.vertices. (B. McMahon)
 ;
